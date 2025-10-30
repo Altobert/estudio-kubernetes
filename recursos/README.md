@@ -107,7 +107,7 @@
 - [CNCF](https://www.youtube.com/c/cloudnativefdn)
 - [TechWorld with Nana](https://www.youtube.com/c/TechWorldwithNana)
 - [That DevOps Guy](https://www.youtube.com/c/MarcelDempers)
-- [Just me and Opensource](https://www.youtube.com/c/wenkatn-justmeandopensource)
+- [Just me and OpenSource](https://www.youtube.com/c/wenkatn-justmeandopensource)
 
 ## 📰 Blogs y Newsletters
 
