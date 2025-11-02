@@ -1,0 +1,24 @@
+# comandos para administrar el cluster
+
+Administre su clúster
+Pausar Kubernetes sin afectar las aplicaciones implementadas:
+
+minikube pause
+Reanudar una instancia pausada:
+
+minikube unpause
+Detener el clúster:
+
+minikube stop
+Cambiar el límite de memoria predeterminado (requiere reiniciar):
+
+minikube config set memory 9001
+Explorar el catálogo de servicios de Kubernetes de fácil instalación:
+
+minikube addons list
+Crear un segundo clúster que ejecute una versión anterior de Kubernetes:
+
+minikube start -p aged --kubernetes-version=v1.34.0
+Eliminar todos los clústeres de minikube:
+
+minikube delete --all
