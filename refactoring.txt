@@ -1,0 +1,52 @@
+Refactorización
+Las empresas más nuevas y modernas poseen el conocimiento y 
+la tecnología para crear aplicaciones nativas de la nube que impulsan su negocio
+
+Desafortunadamente, ese no es el caso para las empresas establecidas que 
+utilizan aplicaciones monolíticas heredadas.
+ Algunas han intentado ejecutar monolitos como microservicios y,
+  como era de esperar, no funcionó muy bien.
+   Las lecciones aprendidas fueron que una aplicación multiproceso de tamaño monolítico 
+   no puede ejecutarse como un microservicio y que debían explorarse otras opciones.
+    El siguiente paso natural en el camino de la transición de monolito a microservicios
+     fue la refactorización.
+      Sin embargo, migrar una aplicación de décadas de antigüedad a la nube 
+      mediante la refactorización plantea serios desafíos y 
+      la empresa se enfrenta al dilema del enfoque de refactorización:
+       un enfoque "Big-bang" o una refactorización incremental.
+
+Un enfoque llamado "Big-bang" centra todos los esfuerzos 
+    en la refactorización del monolito,
+     posponiendo el desarrollo y la implementación de cualquier característica nueva,
+      lo que esencialmente retrasa el progreso y posiblemente, en el proceso,
+       incluso rompe el núcleo del negocio, el monolito
+
+Un enfoque de refactorización incremental garantiza que las nuevas funcionalidades 
+    se desarrollen e implementen como microservicios modernos que
+     pueden comunicarse con el monolito a través de API,
+      sin añadir código al monolito.
+     Mientras tanto, las funcionalidades se refactorizan fuera del monolito,
+      que desaparece gradualmente mientras toda o la mayor parte 
+      de su funcionalidad se moderniza en microservicios.
+       Este enfoque incremental ofrece una transición gradual de un monolito
+        heredado a una arquitectura de microservicios moderna y 
+        permite la migración por fases de las funcionalidades
+         de la aplicación a la nube.
+
+Una vez que una empresa elige la ruta de refactorización,
+ existen otras consideraciones en el proceso.
+  Qué componentes de negocio separar del monolito para convertirlos en microservicios 
+  distribuidos, cómo desacoplar las bases de datos de la aplicación 
+  para separar la complejidad de los datos de la lógica de la aplicación y
+   cómo probar los nuevos microservicios y sus dependencias son solo algunas 
+   de las decisiones a las que se enfrenta una empresa durante la refactorización
+
+La fase de refactorización transforma lentamente el monolito en una aplicación nativa
+ de la nube que aprovecha al máximo las características de la nube,
+  mediante la codificación en nuevos lenguajes de programación y
+   la aplicación de patrones arquitectónicos modernos. 
+   A través de la refactorización, 
+   una aplicación monolítica heredada recibe una segunda oportunidad de vida:
+    vivir como un sistema modular adaptado para integrarse completamente 
+    con las herramientas y servicios de automatización en la nube de ritmo
+     acelerado de hoy en día.
