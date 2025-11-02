@@ -15,15 +15,38 @@ Migrar una aplicación a la nube debería ser tan sencillo como caminar por la p
        basado en patrones y
         principios de arquitectura de software obsoletos.
 
-Con el tiempo, las nuevas funcionalidades y mejoras aumentaron la complejidad del código,
- dificultando el desarrollo: los tiempos de carga, compilación y construcción se incrementan con cada actualización. Sin embargo, la administración resulta más sencilla, ya que la aplicación se ejecuta en un único servidor, idealmente una máquina virtual o un mainframe.
+Con el tiempo, las nuevas funcionalidades
+ y mejoras aumentaron la complejidad del código,
+ dificultando el desarrollo: 
+    los tiempos de carga,
+     compilación y construcción se incrementan con cada actualización.
+      Sin embargo, la administración resulta más sencilla,
+       ya que la aplicación se ejecuta en un único servidor,
+        idealmente una máquina virtual o un mainframe.
 
 Un sistema monolítico requiere hardware de alta gama. 
 Al ser un software grande y único que crece continuamente,
- debe ejecutarse en un único sistema que satisfaga sus necesidades de cómputo, memoria, almacenamiento y red. El hardware de tal capacidad no solo es complejo y extremadamente caro, sino que a veces resulta difícil de conseguir.
+ debe ejecutarse en un único sistema que satisfaga sus necesidades de cómputo,
+  memoria, almacenamiento y red. 
+  El hardware de tal capacidad no solo es complejo y extremadamente caro,
+   sino que a veces resulta difícil de conseguir.
 
 Dado que la aplicación monolítica se ejecuta como un único proceso, 
 escalar sus funcionalidades individuales resulta prácticamente imposible. 
-Internamente, admite un número fijo de conexiones y operaciones. Sin embargo, es posible escalar la aplicación completa implementando manualmente una nueva instancia en otro servidor, generalmente detrás de un balanceador de carga, lo cual también implica un alto coste.
+Internamente, admite un número fijo de conexiones y operaciones.
+ Sin embargo, es posible escalar la aplicación completa implementando 
+ manualmente una nueva instancia en otro servidor,
+  generalmente detrás de un balanceador de carga,
+   lo cual también implica un alto coste.
 
-Durante las actualizaciones, la aplicación de parches o las migraciones de la aplicación monolítica, las interrupciones del servicio son inevitables y es necesario planificar las ventanas de mantenimiento con suficiente antelación, ya que se prevé que las interrupciones afecten a los clientes. Si bien existen soluciones de terceros para minimizar el tiempo de inactividad mediante la configuración de aplicaciones monolíticas en una configuración activa/pasiva de alta disponibilidad, estas soluciones plantean nuevos retos para los ingenieros de sistemas, quienes deben mantener todos los sistemas actualizados con el mismo nivel de parches, y pueden generar nuevos costes de licencia.
+Durante las actualizaciones,
+ la aplicación de parches o las migraciones de la aplicación monolítica,
+  las interrupciones del servicio son inevitables y
+   es necesario planificar las ventanas de mantenimiento con suficiente antelación,
+    ya que se prevé que las interrupciones afecten a los clientes.
+     Si bien existen soluciones de terceros para minimizar el tiempo de inactividad 
+     mediante la configuración de aplicaciones monolíticas en una
+      configuración activa/pasiva de alta disponibilidad,
+       estas soluciones plantean nuevos retos para los ingenieros de sistemas,
+        quienes deben mantener todos los sistemas actualizados con el mismo
+         nivel de parches, y pueden generar nuevos costes de licencia.
