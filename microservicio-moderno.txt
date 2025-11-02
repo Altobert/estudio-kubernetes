@@ -1,21 +1,35 @@
 El microservicio moderno
 Los fragmentos, a diferencia de la roca de 1000 toneladas, 
 son mucho más fáciles de manejar. 
-Se extraen del monolito, se separan entre sí y se convierten en componentes distribuidos, cada uno descrito por un conjunto de características específicas. Una vez pesados ​​en conjunto, los fragmentos equivalen al peso de la roca completa. Estos fragmentos representan microservicios débilmente acoplados, cada uno con una función empresarial específica. El conjunto de todas las funciones conforma la funcionalidad global de la aplicación monolítica original. Los fragmentos son fáciles de seleccionar y agrupar según su color, tamaño y forma, y ​​requieren un esfuerzo mínimo para reubicarlos cuando sea necesario. Intente reubicar la roca de 1000 toneladas sin esfuerzo.
+Se extraen del monolito, se separan entre sí y se convierten en componentes distribuidos, cada uno descrito por un conjunto de características específicas. 
+Una vez pesados ​​en conjunto, los fragmentos equivalen al peso de la roca completa. Estos fragmentos representan microservicios débilmente acoplados, cada uno con una función empresarial específica. El conjunto de todas las funciones conforma la funcionalidad global de la aplicación monolítica original. Los fragmentos son fáciles de seleccionar y agrupar según su color, tamaño y forma, y ​​requieren un esfuerzo mínimo para reubicarlos cuando sea necesario. Intente reubicar la roca de 1000 toneladas sin esfuerzo.
 
 Los microservicios se pueden implementar individualmente en servidores separados
  aprovisionados con menos recursos: solo lo que requiere cada servicio y el propio sistema host, lo que ayuda a reducir los gastos de recursos informáticos.
 
 La arquitectura basada en microservicios se alinea con los principios 
-de la arquitectura orientada a eventos y la arquitectura orientada a servicios (SOA), donde las aplicaciones complejas se componen de pequeños procesos independientes que se comunican entre sí mediante interfaces de programación de aplicaciones (API) a través de una red. Las API permiten el acceso a otros servicios internos de la misma aplicación o a servicios y aplicaciones externos de terceros.
+de la arquitectura orientada a eventos 
+y la arquitectura orientada a servicios (SOA),
+ donde las aplicaciones complejas se componen de pequeños procesos independientes 
+ que se comunican entre sí mediante interfaces de programación de aplicaciones (API) a través de una red. Las API permiten el acceso a otros servicios internos de la misma aplicación o a servicios y aplicaciones externos de terceros.
 
 Cada microservicio se desarrolla 
 y programa en un lenguaje moderno, 
-seleccionado por ser el más adecuado para el tipo de servicio y su función empresarial. Esto ofrece una gran flexibilidad a la hora de adaptar los microservicios al hardware específico cuando sea necesario, lo que permite su implementación en hardware estándar económico.
+seleccionado por ser el más adecuado 
+para el tipo de servicio y su función empresarial. 
+Esto ofrece una gran flexibilidad a la hora de adaptar los microservicios al hardware específico cuando sea necesario, lo que permite su implementación en hardware estándar económico.
 
 Si bien la naturaleza distribuida de los microservicios 
-añade complejidad a la arquitectura, una de sus mayores ventajas es la escalabilidad. Al volverse modular la aplicación, cada microservicio puede escalarse individualmente, ya sea manualmente o de forma automatizada mediante el escalado automático bajo demanda.
+añade complejidad a la arquitectura, 
+una de sus mayores ventajas es la escalabilidad. 
+Al volverse modular la aplicación, 
+cada microservicio puede escalarse individualmente,
+ ya sea manualmente o de forma automatizada mediante el escalado automático bajo demanda.
 
 Las actualizaciones y los procesos de parcheo sin interrupciones 
 son otras ventajas de la arquitectura de microservicios. 
-Prácticamente no hay tiempo de inactividad ni interrupciones del servicio para los clientes, ya que las actualizaciones se implementan de forma continua, un servicio a la vez, en lugar de tener que recompilar, reconstruir y reiniciar una aplicación monolítica completa. Como resultado, las empresas pueden desarrollar e implementar nuevas funciones y actualizaciones mucho más rápido, con una metodología ágil, con equipos especializados en distintas funcionalidades, lo que se traduce en mayor productividad y rentabilidad.
+Prácticamente no hay tiempo de inactividad ni interrupciones del servicio
+ para los clientes, ya que las actualizaciones se implementan de forma continua, 
+ un servicio a la vez, en lugar de tener que recompilar, 
+reconstruir y reiniciar una aplicación monolítica completa. 
+Como resultado, las empresas pueden desarrollar e implementar nuevas funciones y actualizaciones mucho más rápido, con una metodología ágil, con equipos especializados en distintas funcionalidades, lo que se traduce en mayor productividad y rentabilidad.
