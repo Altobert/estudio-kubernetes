@@ -2,9 +2,18 @@ El monolito del legado
 
 Aunque la mayoría de las empresas creen que la nube será el nuevo hogar para las aplicaciones heredadas,
  no todas las aplicaciones heredadas son aptas para la nube, al menos no todavía.
+ Aun no todas las aplicaciones legacy son para la nube.
 
 Migrar una aplicación a la nube debería ser tan sencillo como caminar por la playa,
- recoger piedrecitas en un cubo y llevarlas fácilmente a donde se necesiten. En cambio, una roca de 1000 toneladas no es nada fácil de transportar. Esta roca representa la aplicación monolítica: capas sedimentadas de funcionalidades y lógica redundante, traducidas a miles de líneas de código, escritas en un único lenguaje de programación, no precisamente moderno, basado en patrones y principios de arquitectura de software obsoletos.
+ recoger piedrecitas en un cubo y llevarlas fácilmente a donde se necesiten. 
+ En cambio, una roca de 1000 toneladas no es nada fácil de transportar.
+  Esta roca representa la aplicación monolítica:
+   capas sedimentadas de funcionalidades y lógica redundante,
+    traducidas a miles de líneas de código,
+     escritas en un único lenguaje de programación,
+      no precisamente moderno,
+       basado en patrones y
+        principios de arquitectura de software obsoletos.
 
 Con el tiempo, las nuevas funcionalidades y mejoras aumentaron la complejidad del código,
  dificultando el desarrollo: los tiempos de carga, compilación y construcción se incrementan con cada actualización. Sin embargo, la administración resulta más sencilla, ya que la aplicación se ejecuta en un único servidor, idealmente una máquina virtual o un mainframe.
