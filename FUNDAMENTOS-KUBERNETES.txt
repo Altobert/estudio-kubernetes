@@ -6,11 +6,21 @@ Aquí tienes un resumen interpretativo:
 ---
 ### 🧠 ¿Qué quiere transmitir este capítulo?
 
-- **Transformación digital desigual**: Las startups y empresas recientes nacieron con una visión clara del futuro tecnológico, por lo que diseñaron sus sistemas directamente para la nube. En cambio, muchas organizaciones más antiguas siguen atrapadas en arquitecturas obsoletas.
+- Transformación digital desigual: Las startups y empresas recientes nacieron 
+con una visión clara del futuro tecnológico, por lo que diseñaron sus sistemas
+directamente para la nube. 
+En cambio, muchas organizaciones más antiguas siguen atrapadas 
+en arquitecturas obsoletas.
 
-- **Tecnología heredada como obstáculo**: Estas empresas tradicionales dependen de aplicaciones monolíticas, donde todos los componentes están tan entrelazados que es casi imposible separarlos. Esto complica la gestión, el mantenimiento y la escalabilidad, además de requerir hardware costoso.
+- Tecnología heredada como obstáculo: Estas empresas tradicionales dependen de
+ aplicaciones monolíticas (instalado todo fijo), 
+ donde todos los componentes están tan entrelazados que es casi imposible separarlos. Esto complica la gestión, el mantenimiento y la escalabilidad, 
+ además de requerir hardware costoso.
 
-- **La “caja negra” como metáfora del caos**: Algunas organizaciones ni siquiera comprenden cómo funciona su sistema principal. No hay documentación, la lógica es opaca, y los procesos internos son un misterio. Esto genera dependencia, riesgo y frustración.
+- **La “caja negra” como metáfora del caos**: 
+Algunas organizaciones ni siquiera comprenden cómo funciona su sistema principal.
+No hay documentación, la lógica es opaca, y los procesos internos son un misterio.
+Esto genera dependencia, riesgo y frustración.
 
 - **Migrar a la nube no es trivial**: Si te asignan la tarea de modernizar una aplicación así, el texto advierte que será un proceso largo y difícil. No se trata solo de cambiar tecnología, sino de desentrañar años de complejidad y falta de claridad.
 
@@ -18,12 +28,21 @@ Aquí tienes un resumen interpretativo:
 
 ### 🔍 ¿Cómo se puede entender más profundamente?
 
-Este capítulo no solo habla de tecnología, sino también de **cultura organizacional**, **legado técnico** y **resistencia al cambio**. Migrar a la nube implica:
+Este capítulo no solo habla de tecnología, 
+sino también de **cultura organizacional**,
+ **legado técnico** y **resistencia al cambio**. Migrar a la nube implica:
 
-- **Replantear procesos**: No basta con copiar lo viejo en un entorno nuevo. Hay que rediseñar.
-- **Documentar lo invisible**: Lo que nunca se escribió debe ser descubierto y explicado.
-- **Romper el monolito**: Separar componentes, modularizar, y adoptar arquitecturas modernas como microservicios.
-- **Gestionar el cambio humano**: No solo se transforman sistemas, también mentalidades.
+- **Replantear procesos**: No basta con copiar lo viejo en un entorno nuevo. 
+    Hay que rediseñar.
+- **Documentar lo invisible**: 
+    documentar y explicar lo que nunca se hizo.     
+- **Romper el monolito**: 
+    Separar compinentes,
+    modularizar, 
+    y adoptar arquitecturas modernas como microservicios.
+- **Gestionar el cambio humano**: 
+    actualizar sistemas, pero tambien,
+    cambiar también mentalidades.
 
 ---
 
