@@ -6,6 +6,12 @@ pasar de monolitos a microservicios es un viaje gratificante,
  A continuación,
   enumeramos solo algunas de las historias de éxito de empresas que aceptaron el desafío de modernizar sus aplicaciones empresariales monolíticas. Una lista detallada de historias de éxito está disponible en el sitio web de Kubernetes: Estudios de casos de usuarios de Kubernetes .
 
+  AppDirect , un proveedor de plataforma de comercio integral, comenzó con una aplicación monolítica compleja y, mediante la refactorización, pudo conservar monolitos con funcionalidad limitada que recibían muy pocas confirmaciones, pero todas las nuevas funciones se implementaron como microservicios en contenedores.
+  box , un proveedor de soluciones de almacenamiento en la nube, comenzó con una arquitectura monolítica compleja y, mediante la refactorización, pudo descomponerla en microservicios
+  Crowdfire , un proveedor de soluciones de gestión de contenido, descompuso con éxito su monolito inicial en microservicios.
+  GolfNow , un proveedor de tecnología y servicios, decidió dividir sus monolitos en microservicios contenerizados.
+  Pinterest , un proveedor de servicios de redes sociales, comenzó el proceso de refactorización migrando primero su API monolítica
+
 Haga clic para obtener más información 
     sobre algunas de las empresas que lograron modernizar sus aplicaciones
      empresariales monolíticas.
