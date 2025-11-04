@@ -2,18 +2,21 @@ Refactorización
 Las empresas más nuevas y modernas poseen el conocimiento y 
 la tecnología para crear aplicaciones nativas de la nube que impulsan su negocio
 
+
 Desafortunadamente, ese no es el caso para las empresas establecidas que 
 utilizan aplicaciones monolíticas heredadas.
  Algunas han intentado ejecutar monolitos como microservicios y,
   como era de esperar, no funcionó muy bien.
    Las lecciones aprendidas fueron que una aplicación multiproceso de tamaño monolítico 
    no puede ejecutarse como un microservicio y que debían explorarse otras opciones.
-    El siguiente paso natural en el camino de la transición de monolito a microservicios
-     fue la refactorización.
-      Sin embargo, migrar una aplicación de décadas de antigüedad a la nube 
-      mediante la refactorización plantea serios desafíos y 
-      la empresa se enfrenta al dilema del enfoque de refactorización:
-       un enfoque "Big-bang" o una refactorización incremental.
+
+El siguiente paso natural en el camino de la transición de monolito a microservicios
+  fue la refactorización.
+    Sin embargo, migrar una aplicación de décadas de antigüedad a la nube 
+    mediante la refactorización plantea serios desafíos y 
+    la empresa se enfrenta al dilema del enfoque de refactorización:
+    un enfoque "Big-bang" o una refactorización incremental.
+
 
 Un enfoque llamado "Big-bang" centra todos los esfuerzos 
     en la refactorización del monolito,
@@ -21,6 +24,7 @@ Un enfoque llamado "Big-bang" centra todos los esfuerzos
       lo que esencialmente retrasa el progreso y posiblemente, en el proceso,
        incluso rompe el núcleo del negocio, el monolito
 
+(Metodologia que señalo Kerto, ahorcamiento)
 Un enfoque de refactorización incremental garantiza que las nuevas funcionalidades 
     se desarrollen e implementen como microservicios modernos que
      pueden comunicarse con el monolito a través de API,

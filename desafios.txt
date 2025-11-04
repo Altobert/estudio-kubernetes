@@ -1,0 +1,52 @@
+Desafíos
+El camino de refactorización de un monolito a microservicios 
+no es sencillo ni está exento de desafíos.
+ No todos los monolitos son candidatos perfectos para la refactorización,
+  mientras que algunos incluso podrían no "sobrevivir" a dicha fase de modernización.
+   Al decidir si un monolito es un posible candidato para la refactorización, 
+   hay muchos problemas posibles que considerar.
+
+Al considerar un sistema heredado basado en Mainframe,
+ escrito en lenguajes de programación antiguos (Cobol o Assembler),
+  puede ser más económico reconstruirlo desde cero como una aplicación nativa de la nube.
+   Una aplicación heredada mal diseñada debe rediseñarse y
+    reconstruirse desde cero siguiendo patrones arquitectónicos
+     modernos para microservicios e incluso contenedores. 
+     Las aplicaciones estrechamente acopladas con almacenes 
+     de datos tampoco son buenas candidatas para la refactorización.
+
+Una vez que el monolito sobrevivió a la fase de refactorización, 
+    el siguiente desafío es diseñar mecanismos o encontrar herramientas adecuadas 
+    para mantener vivos todos los módulos desacoplados y
+     garantizar la resiliencia de la aplicación en su conjunto
+
+Elegir los entornos de ejecución puede ser otro desafío.
+ Si se implementan muchos módulos en un único servidor físico o virtual,
+  es probable que las distintas bibliotecas y entornos de ejecución entren en conflicto,
+   lo que provoca errores y fallos.
+    Esto obliga a implementar un módulo por servidor para separar sus dependencias,
+     lo cual no es una forma eficiente de gestionar los recursos y
+      no supone una verdadera segregación entre bibliotecas y entornos de ejecución,
+       ya que cada servidor también ejecuta un sistema operativo con sus bibliotecas,
+        consumiendo así recursos del servidor;
+         en ocasiones,
+          el sistema operativo consume más recursos que 
+          el propio módulo de la aplicación.
+
+Finalmente, surgió una solución para abordar estos desafíos de refactorización.
+ Los contenedores de aplicaciones aparecieron,
+  proporcionando entornos de ejecución ligeros y encapsulados para los módulos 
+  de la aplicación.
+   Los contenedores prometían entornos de software consistentes 
+   para desarrolladores y probadores,
+    desde el desarrollo hasta la producción.
+     El amplio soporte de contenedores garantizó la portabilidad de las
+      aplicaciones desde servidores físicos hasta máquinas virtuales,
+       pero esta vez con múltiples aplicaciones implementadas en el mismo servidor,
+        cada una ejecutándose en su propio entorno de ejecución aislado del otro,
+         evitando así conflictos, errores y fallos.
+
+          Otras características de los entornos de aplicaciones contenerizadas
+           son una mayor utilización del servidor, 
+           escalabilidad de módulos individuales, flexibilidad,
+            interoperabilidad y fácil integración con herramientas de automatización.
