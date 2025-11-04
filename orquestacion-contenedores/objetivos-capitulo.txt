@@ -1,0 +1,13 @@
+
+
+Objetivos de aprendizaje
+Al finalizar este capítulo, deberías ser capaz de:
+
+Defina el concepto de orquestación de contenedores.
+
+Explique las ventajas de utilizar la orquestación de contenedores.
+    Que ventajas tiene orquestas contenedores?
+Analizar las diferentes opciones de orquestación de contenedores.
+    QUe opciones existen para la orquestacion?
+Analizar las diferentes opciones de despliegue de orquestación de contenedores.
+    Como desplegar?
