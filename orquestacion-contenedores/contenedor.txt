@@ -10,3 +10,17 @@ Son ideales para la implementación de microservicios,
   ya que proporcionan entornos virtuales portátiles y
    aislados donde las aplicaciones pueden ejecutarse sin
     interferencias de otras aplicaciones en ejecución.
+
+Los microservicios son aplicaciones ligeras escritas en diversos lenguajes de programación modernos,
+ con dependencias, bibliotecas y requisitos de entorno específicos. 
+ Para garantizar que una aplicación tenga todo lo necesario para funcionar correctamente,
+  se empaqueta junto con sus dependencias.
+
+Los contenedores encapsulan microservicios y sus dependencias, 
+    pero no los ejecutan directamente. 
+Los contenedores ejecutan imágenes de contenedor.
+
+Una imagen de contenedor incluye la aplicación junto con su entorno de ejecución, bibliotecas y dependencias,
+ y representa el origen de un contenedor desplegado para ofrecer un entorno ejecutable aislado para la aplicación.
+  Los contenedores se pueden desplegar a partir de una imagen específica en diversas plataformas,
+   como estaciones de trabajo, máquinas virtuales, nube pública, etc.
