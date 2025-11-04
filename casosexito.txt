@@ -1,0 +1,11 @@
+Casos de
+Aunque es un proceso desafiante, 
+pasar de monolitos a microservicios es un viaje gratificante,
+ especialmente una vez que una empresa comienza a ver el 
+ crecimiento y el éxito que ofrece un sistema de aplicaciones refactorizado. 
+ A continuación,
+  enumeramos solo algunas de las historias de éxito de empresas que aceptaron el desafío de modernizar sus aplicaciones empresariales monolíticas. Una lista detallada de historias de éxito está disponible en el sitio web de Kubernetes: Estudios de casos de usuarios de Kubernetes .
+
+Haga clic para obtener más información 
+    sobre algunas de las empresas que lograron modernizar sus aplicaciones
+     empresariales monolíticas.
