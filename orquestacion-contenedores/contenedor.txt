@@ -1,0 +1,10 @@
+¿Qué son los contenedores?
+Antes de adentrarnos en la orquestación de contenedores,
+ repasemos primero qué son los contenedores.
+
+Los contenedores son un método centrado en las aplicaciones
+ para ofrecer aplicaciones escalables y de alto rendimiento en cualquier infraestructura.
+  Son ideales para la implementación de microservicios, 
+  ya que proporcionan entornos virtuales portátiles y
+   aislados donde las aplicaciones pueden ejecutarse sin
+    interferencias de otras aplicaciones en ejecución.
