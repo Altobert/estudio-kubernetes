@@ -1,0 +1,13 @@
+Resumen del capítulo
+Las imágenes de contenedor nos permiten confinar el código de la aplicación,
+ su entorno de ejecución y todas sus dependencias en un formato predefinido.
+ Los entornos de ejecución de contenedores, como runC, containerd o cri-o, 
+pueden usar imágenes preempaquetadas como fuente para crear y ejecutar uno o más contenedores.
+ Estos entornos de ejecución son capaces de ejecutar contenedores en un solo host; 
+sin embargo, en la práctica, se busca una solución tolerante a fallos y escalable, 
+que se consigue mediante la creación de una única unidad de control/gestión, 
+un conjunto de múltiples hosts conectados entre sí. 
+Esta unidad de control/gestión se conoce generalmente como orquestador de contenedores.
+
+En este capítulo, exploraremos por qué deberíamos usar orquestadores de contenedores, 
+las diferentes implementaciones de orquestadores de contenedores y dónde implementarlos.
