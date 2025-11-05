@@ -1,0 +1,17 @@
+¿Qué es la orquestación de contenedores?
+En entornos de desarrollo (Dev), 
+    ejecutar contenedores en un único host para el desarrollo y 
+    las pruebas de aplicaciones puede ser una opción adecuada. 
+Sin embargo, al migrar a entornos de control de calidad (QA) y producción (Prod), esta opción deja de ser viable,
+ ya que las aplicaciones y los servicios deben cumplir requisitos específicos.
+
+Tolerancia a fallos
+Escalabilidad bajo demanda
+Uso óptimo de los recursos
+Autodescubrimiento para descubrirse y comunicarse automáticamente entre sí
+Accesibilidad desde el mundo exterior
+Actualizaciones/reversiones sin interrupciones y sin tiempo de inactividad.
+Los orquestadores de contenedores son herramientas que agrupan sistemas para formar clústeres donde el despliegue y
+ la gestión de contenedores se automatizan a gran escala, 
+ cumpliendo con los requisitos mencionados. 
+ Los sistemas en clúster ofrecen las ventajas de los sistemas distribuidos, como mayor rendimiento, rentabilidad, fiabilidad, distribución de la carga de trabajo y menor latencia.
