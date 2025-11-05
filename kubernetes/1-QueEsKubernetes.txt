@@ -1,0 +1,27 @@
+
+¿Qué es Kubernetes?
+Según el sitio web de Kubernetes ,
+
+"Kubernetes es un sistema de código abierto para automatizar el despliegue, 
+    el escalado y
+    la gestión de aplicaciones en contenedores".
+
+Kubernetes proviene de la palabra griega κυβερνήτης , que significa timonel o piloto de barco . 
+    Con esta analogía en mente, 
+    podemos pensar en Kubernetes como el piloto de un barco de contenedores.
+
+Kubernetes también se conoce como k8s (pronunciado Kate's),
+ ya que hay 8 caracteres entre la k y la s.
+
+Kubernetes se inspira en gran medida en el sistema Borg de Google,
+    un orquestador de contenedores y cargas de trabajo para sus operaciones
+     globales que Google ha estado utilizando durante más de una década.
+       Es un proyecto de código abierto escrito en el lenguaje Go y licenciado bajo la Licencia, Versión 2.0 .
+
+Kubernetes fue creado por Google y, 
+    con el lanzamiento de su versión 1.0 en julio de 2015, 
+     Google lo donó a la Cloud Native Computing Foundation (CNCF),
+      una de las subfundaciones más grandes de la Linux Foundation .
+
+Las nuevas versiones de Kubernetes se publican en ciclos de 4 meses. 
+    La versión estable actual es la 1.29 (a diciembre de 2023).
