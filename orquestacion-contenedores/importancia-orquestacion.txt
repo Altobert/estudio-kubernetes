@@ -1,0 +1,18 @@
+¿Por qué usar orquestadores de contenedores?
+Si bien podemos mantener manualmente un par de contenedores o escribir scripts para gestionar el ciclo de vida de docenas de contenedores, 
+    los orquestadores facilitan mucho las cosas a los usuarios, 
+    especialmente cuando se trata de gestionar cientos o miles de contenedores que se ejecutan en una infraestructura global.
+
+La mayoría de los orquestadores de contenedores pueden:
+
+    Agrupar los hosts al crear un clúster para aprovechar las ventajas de los sistemas distribuidos.
+    Programar la ejecución de contenedores en los hosts del clúster en función de la disponibilidad de recursos.
+    
+    Habilitar la comunicación entre los contenedores de un clúster, independientemente del host en el que estén implementados dentro del clúster.
+    Vincular contenedores y recursos de almacenamiento.
+    
+    Agrupar conjuntos de contenedores similares y vincúlelos a estructuras de equilibrio de carga para simplificar el acceso a las aplicaciones contenerizadas mediante la creación de una interfaz, un nivel de abstracción entre los contenedores y el cliente.
+    Gestionar y optimizar el uso de los recursos.
+
+    Permitir la implementación de políticas para asegurar el acceso a las aplicaciones que se ejecutan dentro de contenedores.
+    Con todas estas características configurables y flexibles, los orquestadores de contenedores son la opción ideal para gestionar aplicaciones contenerizadas a gran escala. En este curso, exploraremos Kubernetes, una de las herramientas de orquestación de contenedores más demandadas actualmente.
