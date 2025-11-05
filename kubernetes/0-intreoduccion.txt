@@ -1,0 +1,22 @@
+****Resumen del capítulo****
+En este capítulo, describimos Kubernetes, 
+    sus características y las razones por las que debería usarlo. 
+    Exploraremos la evolución de Kubernetes desde Borg, 
+    el gestor de cargas de trabajo distribuidas de Google.
+
+También aprenderemos sobre la Cloud Native Computing Foundation (CNCF), 
+    que actualmente alberga el proyecto Kubernetes, 
+    junto con otros proyectos populares de computación nativa en la nube, 
+    como Argo, Cilium, Prometheus, Fluentd, etcd, CoreDNS, cri-o, 
+    containerd, Helm, Envoy, Istio y Linkerd, por nombrar solo algunos.
+
+****Objetivos de aprendizaje****
+Al finalizar este capítulo, deberías ser capaz de:
+
+    Define Kubernetes.
+    Explica las razones para usar Kubernetes.
+    Analice las características de Kubernetes.
+    Analice la evolución de Kubernetes desde Borg.
+    Explique el papel de la Cloud Native Computing Foundation.
+
+
