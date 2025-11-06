@@ -1,0 +1,23 @@
+¿Por qué usar Kubernetes?
+
+Otra de las fortalezas de Kubernetes es su portabilidad. 
+    Puede implementarse en diversos entornos,
+     como máquinas virtuales locales o remotas,
+      servidores físicos o configuraciones de nube pública,
+       privada, híbrida o multi-nube.
+
+La extensibilidad de Kubernetes le permite ser compatible con numerosas herramientas de código abierto de terceros, 
+    las cuales mejoran sus capacidades y brindan una experiencia rica en funcionalidades a sus usuarios. 
+        Su arquitectura es modular y conectable. 
+            No solo orquesta aplicaciones modulares de microservicios desacoplados, 
+            sino que su arquitectura también sigue patrones de microservicios desacoplados. 
+            La funcionalidad de Kubernetes se puede extender mediante la creación de recursos,
+             operadores, API, 
+             reglas de programación o complementos personalizados.
+
+Para que un proyecto de código abierto tenga éxito, 
+    la comunidad es tan importante como contar con un código excelente. 
+    Kubernetes cuenta con el respaldo de una próspera comunidad global. 
+    Tiene más de 3500 colaboradores, quienes, a lo largo del tiempo, 
+    han realizado más de 120 000 contribuciones. 
+    Existen grupos de encuentro en distintas ciudades y países que se reúnen periódicamente para debatir sobre Kubernetes y su ecosistema. La comunidad se divide en Grupos de Interés Especial (SIG), que se centran en temas específicos, como escalabilidad, servidores dedicados, redes, almacenamiento, etc. Aprenderemos más sobre ellos en el último capítulo, «La comunidad de Kubernetes» .
