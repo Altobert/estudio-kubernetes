@@ -1,0 +1,19 @@
+Usuarios de Kubernetes
+En menos de una década desde su debut, 
+    Kubernetes se ha convertido en la plataforma preferida por muchas empresas de diversos tamaños para ejecutar sus cargas de trabajo. 
+        Es una solución para la gestión de cargas de trabajo en banca, educación, finanzas e inversiones, juegos, tecnología de la información, medios de comunicación y streaming, comercio electrónico, viajes compartidos, telecomunicaciones, investigación nuclear y muchas otras industrias. 
+            Hay numerosos casos de éxito y estudios de casos de usuarios en el sitio web de Kubernetes:
+
+            BlackRock
+            Booking.com
+            Box
+            CapitalOne
+            Huawei
+            IBM
+            ING
+            Nokia
+            OpenAI
+            Pearson
+            Spotify
+            Wikimedia
+            Y muchos más.
