@@ -1,0 +1,27 @@
+¿Dónde desplegar los orquestadores de contenedores?
+
+La mayoría de los orquestadores de contenedores se pueden implementar en la infraestructura que elijamos: 
+    en servidores físicos, 
+    máquinas virtuales, en servidores locales, 
+    en nubes públicas e híbridas. Kubernetes, por ejemplo, 
+    se puede implementar en una estación de trabajo, 
+    con o sin una capa de aislamiento como un hipervisor local o un entorno de ejecución de contenedores, 
+    dentro del centro de datos de una empresa, 
+    en la nube en instancias de AWS Elastic Compute Cloud (EC2),
+     máquinas virtuales de Google Compute Engine (GCE),
+      Droplets de DigitalOcean, 
+      servidores virtuales de IBM, OpenStack, etc.
+
+Además, 
+    existen soluciones en la nube llave en mano que permiten instalar clústeres de Kubernetes en producción, 
+    con tan solo unos pocos comandos, 
+    sobre infraestructuras como servicio (IaaS) en la nube. 
+    Estas soluciones allanaron el camino para la orquestación de contenedores gestionada como servicio, 
+    más específicamente para la solución de Kubernetes como servicio (KaaS), 
+    ofrecida y alojada por los principales proveedores de nube. 
+    Algunos ejemplos de soluciones KaaS son Amazon Elastic Kubernetes Service (Amazon EKS), 
+    Azure Kubernetes Service (AKS), DigitalOcean Kubernetes ,
+     Google Kubernetes Engine (GKE),
+      IBM Cloud Kubernetes Service , 
+      Oracle Container Engine for Kubernetes y 
+      VMware Tanzu Kubernetes Grid .

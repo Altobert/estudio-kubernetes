@@ -8,7 +8,8 @@ La mayoría de los orquestadores de contenedores pueden:
     Agrupar los hosts al crear un clúster para aprovechar las ventajas de los sistemas distribuidos.
     Programar la ejecución de contenedores en los hosts del clúster en función de la disponibilidad de recursos.
     
-    Habilitar la comunicación entre los contenedores de un clúster, independientemente del host en el que estén implementados dentro del clúster.
+    Habilitar la comunicación entre los contenedores de un clúster, independientemente del host en el que estén implementados
+     dentro del clúster.
     Vincular contenedores y recursos de almacenamiento.
     
     Agrupar conjuntos de contenedores similares y vincúlelos a estructuras de equilibrio de carga para simplificar el acceso a las aplicaciones contenerizadas mediante la creación de una interfaz, un nivel de abstracción entre los contenedores y el cliente.
