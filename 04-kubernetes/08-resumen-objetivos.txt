@@ -11,9 +11,24 @@ Define Kubernetes.
     Que es Borg, un gestor de clusters que administra miles de tareas.
 
 Explica las razones para usar Kubernetes.
+    Portable,
+    Se ejecuta en local como en nube
+    Es extensible ha herramientas de tereros.
+    modular,
+    Es extendible mediante api, reglas de programacion o complementos personalizados.
 
 Analice las características de Kubernetes.
+    
+    Despliega y revierte problemas de actualizacion de aplicaciones
+    Gestion de Secretos.
+    Orquestacion de almacenamiento de Kubernates
+    Kubernet permite ejecucion por lotes.
 
 Analice la evolución de Kubernetes desde Borg.
 
+    Iniciaron con Borg, tomaron los mejor de este administrador de 
+    cluster, el secreto mejor guardado de google.
+    Es un orquestador de contenedores y asministrador de cargas de trabajo de Google.
+
 Explique el papel de la Cloud Native Computing Foundation.
+    Es un incubadora de proyectos para la promocion de proyectos en la nube.

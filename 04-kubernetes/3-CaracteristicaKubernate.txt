@@ -22,19 +22,22 @@ El escalado horizontal
 
     Las siguientes son algunas características adicionales de Kubernetes totalmente compatibles:
 
-Despliegues y reversiones automatizadas:
+        Despliegues y reversiones automatizadas:
 
-    Kubernetes despliega y revierte sin problemas las actualizaciones de las aplicaciones y los cambios de configuración,
-         supervisando constantemente el estado de la aplicación para evitar cualquier tiempo de inactividad.
-    La gestión de secretos y configuración de Kubernetes
-         permite administrar los datos confidenciales y los detalles de configuración de una aplicación de forma independiente a la imagen del contenedor, para evitar la reconstrucción de dicha imagen. Los secretos consisten en información confidencial que se pasa a la aplicación sin revelar su contenido a la configuración de la pila, como ocurre en GitHub.
-    La orquestación de almacenamiento de Kubernetes 
-        monta automáticamente soluciones de almacenamiento definido por software (SDS) en contenedores desde almacenamiento local,
-         proveedores de nube externos, almacenamiento distribuido o sistemas de almacenamiento en red.
-    Kubernetes admite la ejecución por lotes
-    , trabajos de larga duración y la sustitución de contenedores que hayan fallado.
-    Kubernetes de doble pila IPv4/IPv6 admite direcciones IPv4 e IPv6.
-    Kubernetes admite características comunes específicas de Plataforma como Servicio, como el despliegue de aplicaciones, el escalado y el equilibrio de carga, pero permite a los usuarios integrar sus soluciones de monitorización, registro y alertas deseadas a través de complementos opcionales.
+            Kubernetes despliega y revierte sin problemas las actualizaciones de las aplicaciones y los cambios de configuración,
+                supervisando constantemente el estado de la aplicación para evitar cualquier tiempo de inactividad.
+
+            La gestión de secretos y configuración de Kubernetes
+                permite administrar los datos confidenciales y los detalles de configuración de una aplicación de forma independiente a la imagen del contenedor, para evitar la reconstrucción de dicha imagen. Los secretos consisten en información confidencial que se pasa a la aplicación sin revelar su contenido a la configuración de la pila, como ocurre en GitHub.
+
+            La orquestación de almacenamiento de Kubernetes 
+                monta automáticamente soluciones de almacenamiento definido por software (SDS) en contenedores desde almacenamiento local,
+                proveedores de nube externos, almacenamiento distribuido o sistemas de almacenamiento en red.
+
+            Kubernetes admite la ejecución por lotes
+                , trabajos de larga duración y la sustitución de contenedores que hayan fallado.
+                Kubernetes de doble pila IPv4/IPv6 admite direcciones IPv4 e IPv6.
+                Kubernetes admite características comunes específicas de Plataforma como Servicio, como el despliegue de aplicaciones, el escalado y el equilibrio de carga, pero permite a los usuarios integrar sus soluciones de monitorización, registro y alertas deseadas a través de complementos opcionales.
 
 
     Existen muchas características adicionales que actualmente se encuentran en fase alfa o beta. 

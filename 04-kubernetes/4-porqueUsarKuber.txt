@@ -12,12 +12,18 @@ La extensibilidad de Kubernetes le permite ser compatible con numerosas herramie
             No solo orquesta aplicaciones modulares de microservicios desacoplados, 
             sino que su arquitectura también sigue patrones de microservicios desacoplados. 
             La funcionalidad de Kubernetes se puede extender mediante la creación de recursos,
-             operadores, API, 
-             reglas de programación o complementos personalizados.
+            operadores, API, 
+            reglas de programación o complementos personalizados.
 
 Para que un proyecto de código abierto tenga éxito, 
     la comunidad es tan importante como contar con un código excelente. 
     Kubernetes cuenta con el respaldo de una próspera comunidad global. 
     Tiene más de 3500 colaboradores, quienes, a lo largo del tiempo, 
     han realizado más de 120 000 contribuciones. 
-    Existen grupos de encuentro en distintas ciudades y países que se reúnen periódicamente para debatir sobre Kubernetes y su ecosistema. La comunidad se divide en Grupos de Interés Especial (SIG), que se centran en temas específicos, como escalabilidad, servidores dedicados, redes, almacenamiento, etc. Aprenderemos más sobre ellos en el último capítulo, «La comunidad de Kubernetes» .
+    Existen grupos de encuentro en distintas ciudades y países que se reúnen periódicamente para debatir sobre Kubernetes y su ecosistema. 
+    La comunidad se divide en Grupos de Interés Especial (SIG), que se centran en temas específicos, 
+        como escalabilidad, 
+        servidores dedicados, 
+        redes, 
+        almacenamiento, etc. 
+        Aprenderemos más sobre ellos en el último capítulo, «La comunidad de Kubernetes» .
