@@ -1,0 +1,20 @@
+
+CNCF y Kubernetes
+Para Kubernetes, la Cloud Native Computing Foundation:
+
+    Proporciona un entorno neutral para la marca registrada Kubernetes y garantiza su uso adecuado.
+
+    Proporciona escaneo de licencias del código principal y del código de proveedores.
+
+    Ofrece asesoramiento legal sobre cuestiones de patentes y derechos de autor.
+
+    Crea y mantiene planes de estudio , capacitación y certificación de código abierto para asociados de Kubernetes y nativos de la nube (KCNA), administradores de Kubernetes (CKA), 
+    desarrolladores de aplicaciones de Kubernetes (CKAD), especialistas en seguridad de Kubernetes (CKS) y más.
+    
+    Gestiona un grupo de trabajo de conformidad de software .
+    
+    Comercializa activamente Kubernetes.
+    
+    Apoya actividades puntuales.
+    
+    Patrocina conferencias y eventos de encuentro.
