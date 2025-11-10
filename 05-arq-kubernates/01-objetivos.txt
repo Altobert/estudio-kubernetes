@@ -1,0 +1,8 @@
+Objetivos de aprendizaje
+
+Al finalizar este capítulo, deberías ser capaz de:
+
+    Analice la arquitectura de Kubernetes.
+    Explique los diferentes componentes del plano de control y los nodos de trabajo.
+    Analizar la gestión del estado del clúster con etcd.
+    Revisa los requisitos de configuración de red de Kubernetes.
