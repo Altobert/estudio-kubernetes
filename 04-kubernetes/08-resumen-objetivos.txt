@@ -1,0 +1,16 @@
+
+Resumen y desarrollo de Objetivos
+
+Define Kubernetes.
+    Sistema open source encargada del escalado, despliege y administracion de contenedores
+    Es el timonel de un barco de contenedores.
+    Proviene del sistema administrador de contenedores Borg  que ha utilizado google por mucho tiempo.
+    Que es Borg, un gestor de clusters que administra miles de tareas.
+
+Explica las razones para usar Kubernetes.
+
+Analice las características de Kubernetes.
+
+Analice la evolución de Kubernetes desde Borg.
+
+Explique el papel de la Cloud Native Computing Foundation.
