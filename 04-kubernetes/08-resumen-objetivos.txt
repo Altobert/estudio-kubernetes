@@ -2,8 +2,11 @@
 Resumen y desarrollo de Objetivos
 
 Define Kubernetes.
-    Sistema open source encargada del escalado, despliege y administracion de contenedores
-    Es el timonel de un barco de contenedores.
+    Sistema open source encargado de
+        administracion de contenedores
+        escalado, 
+        despliege.
+    Por su palabra griega, es el timonel de un barco de contenedores.
     Proviene del sistema administrador de contenedores Borg  que ha utilizado google por mucho tiempo.
     Que es Borg, un gestor de clusters que administra miles de tareas.
 
