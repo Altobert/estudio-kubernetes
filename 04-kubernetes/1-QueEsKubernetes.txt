@@ -2,9 +2,10 @@
 ¿Qué es Kubernetes?
 Según el sitio web de Kubernetes ,
 
-"Kubernetes es un sistema de código abierto para automatizar el despliegue, 
-    el escalado y
-    la gestión de aplicaciones en contenedores".
+"Kubernetes es un sistema de código abierto para automatizar el 
+    despliegue, 
+    escalado y
+    gestión de aplicaciones en contenedores".
 
 Kubernetes proviene de la palabra griega κυβερνήτης , que significa timonel o piloto de barco . 
     Con esta analogía en mente, 
