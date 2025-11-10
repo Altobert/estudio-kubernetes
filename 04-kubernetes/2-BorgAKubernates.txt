@@ -1,15 +1,23 @@
 De Borg a Kubernetes
 Según el resumen del artículo de Google sobre Borg , publicado en 2015,
 
-"El sistema Borg de Google es un gestor de clústeres que ejecuta cientos de miles de trabajos, procedentes de miles de aplicaciones diferentes, en varios clústeres, cada uno con hasta decenas de miles de máquinas".
+"El sistema Borg de Google es un gestor de clústeres que ejecuta cientos de miles de trabajos, 
+procedentes de miles de aplicaciones diferentes, en varios clústeres, cada uno con hasta decenas de miles de máquinas".
 
-Durante más de una década, Borg ha sido el secreto mejor guardado de Google, gestionando sus cargas de trabajo contenerizadas a nivel mundial en producción. Los servicios que utilizamos de Google, como Gmail, Drive, Maps, Docs, etc., se ejecutan mediante Borg.
+Durante más de una década, 
+    Borg ha sido el secreto mejor guardado de Google, 
+    gestionando sus cargas de trabajo contenerizadas a nivel mundial en producción. 
+    Los servicios que utilizamos de Google,
+        como Gmail, Drive, Maps, Docs, etc., 
+        se ejecutan mediante Borg.
 
-Entre los autores iniciales de Kubernetes se encontraban empleados de Google que habían utilizado y desarrollado Borg en el pasado. Aportaron sus valiosos conocimientos y experiencia al diseño de Kubernetes. Varias características y objetos de Kubernetes tienen su origen en Borg o en las lecciones aprendidas de él, como:
+Entre los autores iniciales de Kubernetes se encontraban empleados de Google que habían utilizado y desarrollado Borg en el pasado. 
+    Aportaron sus valiosos conocimientos y experiencia al diseño de Kubernetes. 
+        Varias características y objetos de Kubernetes tienen su origen en Borg o en las lecciones aprendidas de él, como:
 
-servidores API
-Cápsulas
-IP por pod
-Servicios
-Etiquetas.
-En este curso exploraremos todos ellos, y muchos más.
+        * Servidores API
+        * Cápsulas
+        * IP por pod
+        * Servicios
+        * Etiquetas.
+        * En este curso exploraremos todos ellos, y muchos más.
