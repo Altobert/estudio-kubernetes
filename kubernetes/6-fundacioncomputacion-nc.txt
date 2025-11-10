@@ -1,0 +1,39 @@
+Fundación de Computación Nativa en la Nube (CNCF)
+
+Acelerar la adopcion de tecnologias en la nube.
+
+La CNCF es como una incubadora de proyectos. Proporciona recursos.
+
+Proyectos de graduación populares (a marzo de 2024):
+
+    orquestador de contenedores de Kubernetes
+    Motor de flujo de trabajo Argo para Kubernetes
+    etcd almacenamiento distribuido de clave-valor
+    Servidor DNS CoreDNS
+    tiempo de ejecución del contenedor containerd
+    Tiempo de ejecución del contenedor CRI-O
+    proxy nativo de la nube Envoy
+    Fluentd para el registro unificado
+    Flux: entrega continua para Kubernetes
+    Registro de puertos
+    Gestión de paquetes Helm para Kubernetes
+    Linkerd, malla de servicios para Kubernetes
+    Motor de políticas Open Policy Agent
+    Sistema de monitorización Prometheus y base de datos de series temporales
+    Rook, orquestador de almacenamiento nativo de la nube para Kubernetes
+
+Proyectos clave en incubación:
+
+    Buildpacks.io crea imágenes de aplicaciones
+    Controlador de entrada Contour para Kubernetes
+    gRPC para llamada a procedimiento remoto (RPC)
+    CNI para redes de contenedores Linux
+    Contenedores sin servidor Knative en Kubernetes
+    KubeVirt, gestor de máquinas virtuales basado en Kubernetes
+    Notario para la seguridad de datos
+    Y muchos más .
+
+Proyectos (métricas, monitorización, identidad, scripting, arquitecturas sin servidor, sin nodos y edge computing) de monitorizacion muchoa se encuentran 
+en etapa de incubacion para luego pasar a graduacion.
+
+
