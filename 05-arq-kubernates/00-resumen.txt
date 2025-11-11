@@ -1,10 +1,15 @@
 
 
 Resumen del capítulo
+
 En este capítulo, exploraremos la arquitectura de Kubernetes, 
-los componentes de un nodo del plano de control, 
-la función de los nodos de trabajo, 
-la gestión del estado del clúster con etcd y 
-los requisitos de configuración de la red. 
+
+Los componentes de un NODO del plano de CONTROL, 
+
+La función de los NODOS de trabajo, 
+
+La gestión del estado del clúster con etcd y 
+
+Los requisitos de configuración de la red. 
 
 ...También aprenderemos sobre la Interfaz de Red de Contenedores (CNI), la especificación de red de Kubernetes.
