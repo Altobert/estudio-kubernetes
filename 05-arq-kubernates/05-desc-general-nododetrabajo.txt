@@ -1,0 +1,18 @@
+Descripción general del nodo de trabajo
+
+Un nodo de trabajo proporciona un entorno de ejecución para las aplicaciones cliente. 
+    Estas aplicaciones son microservicios que se ejecutan como contenedores de aplicaciones. 
+    En Kubernetes, los contenedores de aplicaciones están encapsulados en Pods, 
+    controlados por los agentes del plano de control del clúster que se ejecutan en el nodo del plano de control. 
+    Los Pods se programan en los nodos de trabajo, 
+        donde encuentran los recursos de cómputo, memoria y almacenamiento necesarios para ejecutarse, 
+        así como la conectividad de red para comunicarse entre sí y con el exterior. 
+        Un Pod es la unidad de trabajo de programación más pequeña en Kubernetes. 
+        Es una colección lógica de uno o más contenedores programados conjuntamente, 
+        y la colección se puede iniciar, 
+        detener o reprogramar como una sola unidad de trabajo.
+
+Además, 
+    en un clúster Kubernetes de múltiples trabajadores,
+     el tráfico de red entre los usuarios cliente y las aplicaciones en contenedores implementadas en Pods 
+     es manejado directamente por los nodos de trabajo y no se enruta a través del nodo del plano de control.
