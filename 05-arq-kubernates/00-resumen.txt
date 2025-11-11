@@ -1,3 +1,5 @@
+
+
 Resumen del capítulo
 En este capítulo, exploraremos la arquitectura de Kubernetes, 
 los componentes de un nodo del plano de control, 
