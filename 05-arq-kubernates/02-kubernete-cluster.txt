@@ -1,0 +1,11 @@
+Arquitectura de Kubernetes
+
+En términos generales, 
+    Kubernetes es un clúster de sistemas informáticos categorizados 
+        según sus funciones específicas:
+
+        Uno o más nodos del plano de control
+
+        Uno o más nodos de trabajo (opcional,
+        
+            pero recomendado).
