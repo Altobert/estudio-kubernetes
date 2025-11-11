@@ -8,6 +8,7 @@ El nodo del plano de control proporciona un entorno de ejecución para los agent
         los usuarios envían solicitudes al plano de control mediante una herramienta de interfaz de línea de comandos (CLI),
          un panel de control de interfaz web (Web UI) 
             o una interfaz de programación de aplicaciones (API).
+            
 
 Es fundamental mantener el plano de control operativo a toda costa. 
     Su pérdida puede provocar tiempos de inactividad, 
@@ -19,11 +20,12 @@ Es fundamental mantener el plano de control operativo a toda costa.
              los componentes del plano de control permanecen sincronizados entre las réplicas.
               Esta configuración aumenta la resiliencia del plano de control del clúster en caso de fallo del nodo activo.
 
+
 Para conservar el estado del clúster de Kubernetes, 
     todos los datos de configuración se guardan en un almacén 
         de clave-valor distribuido que solo contiene datos relacionados con el estado del clúster, 
         no datos generados por las cargas de trabajo de los clientes. Este almacén de clave-valor puede configurarse en el nodo del plano de control (topología apilada) o en su host dedicado (topología externa) para minimizar la posibilidad de pérdida de datos, al desacoplarlo de los demás agentes del plano de control.
-        
+
 
 En la topología de almacenamiento clave-valor apilado, 
     las réplicas de nodos del plano de control de alta disponibilidad (HA)
