@@ -1,0 +1,33 @@
+Descripción general del nodo del plano de control
+
+El nodo del plano de control proporciona un entorno de ejecución para los agentes del plano de control responsables de gestionar 
+    el estado de un clúster de Kubernetes, 
+        y es el núcleo de todas las operaciones dentro del clúster. 
+    Los componentes del plano de control son agentes con funciones muy específicas en la gestión del clúster. 
+    Para comunicarse con el clúster de Kubernetes, 
+        los usuarios envían solicitudes al plano de control mediante una herramienta de interfaz de línea de comandos (CLI),
+         un panel de control de interfaz web (Web UI) 
+            o una interfaz de programación de aplicaciones (API).
+
+Es fundamental mantener el plano de control operativo a toda costa. 
+    Su pérdida puede provocar tiempos de inactividad, 
+        interrupciones en el servicio a los clientes y posibles pérdidas comerciales. 
+    Para garantizar la tolerancia a fallos del plano de control, 
+        se pueden añadir réplicas de nodos al clúster, 
+            configuradas en modo de alta disponibilidad (HA). 
+            Aunque solo uno de los nodos se dedica a la gestión activa del clúster,
+             los componentes del plano de control permanecen sincronizados entre las réplicas.
+              Esta configuración aumenta la resiliencia del plano de control del clúster en caso de fallo del nodo activo.
+
+Para conservar el estado del clúster de Kubernetes, 
+    todos los datos de configuración se guardan en un almacén 
+        de clave-valor distribuido que solo contiene datos relacionados con el estado del clúster, 
+        no datos generados por las cargas de trabajo de los clientes. Este almacén de clave-valor puede configurarse en el nodo del plano de control (topología apilada) o en su host dedicado (topología externa) para minimizar la posibilidad de pérdida de datos, al desacoplarlo de los demás agentes del plano de control.
+        
+
+En la topología de almacenamiento clave-valor apilado, 
+    las réplicas de nodos del plano de control de alta disponibilidad (HA)
+     también garantizan la resiliencia del almacenamiento clave-valor. 
+     Sin embargo, esto no ocurre con la topología de almacenamiento clave-valor externo, 
+     donde los hosts dedicados al almacenamiento clave-valor deben replicarse por separado para la alta disponibilidad, 
+     una configuración que requiere hardware adicional y, por lo tanto, implica costos operativos adicionales.
