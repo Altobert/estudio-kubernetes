@@ -1,0 +1,33 @@
+
+Desafíos de la creación de redes
+Las aplicaciones basadas en microservicios desacoplados dependen en gran medida de la conectividad de red para imitar el acoplamiento estricto que existía en la era monolítica. En general, la conectividad de red no es fácil de comprender ni de implementar. Kubernetes no es una excepción: como orquestador de microservicios en contenedores, debe abordar algunos desafíos de red específicos.
+
+Comunicación entre contenedores dentro de los Pods
+Comunicación entre pods en el mismo nodo y entre nodos del clúster
+Comunicación entre servicio y pod dentro del mismo espacio de nombres y entre espacios de nombres de clúster
+Comunicación externa al servicio para que los clientes accedan a las aplicaciones en un clúster.
+Todos estos desafíos de red deben ser abordados por un clúster de Kubernetes y sus complementos.
+
+******
+
+    Comunicación entre contenedores dentro de los Pods
+
+        Aprovechando las características de virtualización del kernel del sistema operativo anfitrión, un entorno de ejecución de contenedores crea un espacio de red aislado para cada contenedor que inicia. En Linux, este espacio de red aislado se denomina espacio de nombres de red. Un espacio de nombres de red puede compartirse entre contenedores o con el sistema operativo anfitrión.
+
+        Cuando se inicia un grupo de contenedores definido por un Pod, el entorno de ejecución de contenedores inicializa un contenedor de pausa de infraestructura especial con el único propósito de crear un espacio de nombres de red para el Pod. Todos los contenedores adicionales, creados a petición del usuario y que se ejecutan dentro del Pod, compartirán el espacio de nombres de red del contenedor de pausa para que puedan comunicarse entre sí a través de localhost.
+    
+    Comunicación entre pods a través de nodos
+    
+        En un clúster de Kubernetes, los pods (grupos de contenedores) se programan en los nodos de forma prácticamente impredecible. Independientemente del nodo anfitrión, se espera que los pods puedan comunicarse entre sí en todo el clúster, sin necesidad de implementar la traducción de direcciones de red (NAT). Este es un requisito fundamental para cualquier implementación de red en Kubernetes.
+
+        El modelo de red de Kubernetes busca reducir la complejidad y trata los Pods como máquinas virtuales en una red, donde cada máquina virtual cuenta con una interfaz de red, lo que otorga a cada Pod una dirección IP única. Este modelo, denominado " IP por Pod ", garantiza la comunicación entre Pods, al igual que las máquinas virtuales pueden comunicarse entre sí en la misma red.
+
+        No olvidemos los contenedores. Comparten el espacio de nombres de red del Pod y deben coordinar la asignación de puertos dentro del Pod, al igual que las aplicaciones en una máquina virtual, pudiendo comunicarse entre sí en localhost , dentro del Pod. Sin embargo, los contenedores se integran con el modelo de red general de Kubernetes mediante la Interfaz de Red de Contenedores (CNI), compatible con los plugins CNI . CNI es un conjunto de especificaciones y bibliotecas que permiten a los plugins configurar la red para contenedores. Si bien existen algunos plugins principales , la mayoría de los plugins CNI son soluciones de Redes Definidas por Software (SDN) de terceros que implementan el modelo de red de Kubernetes. Además de abordar el requisito fundamental del modelo de red, algunas soluciones de red ofrecen compatibilidad con políticas de red. Flannel , Weave , Calico y Cilium son solo algunas de las soluciones SDN disponibles para clústeres de Kubernetes.
+    
+        El entorno de ejecución del contenedor delega la asignación de IP a CNI, que se conecta al plugin configurado subyacente, como Bridge o MACvlan, para obtener la dirección IP. Una vez que el plugin correspondiente proporciona la dirección IP, CNI la reenvía al entorno de ejecución del contenedor solicitado.
+
+        Para obtener más detalles, puede consultar la documentación de Kubernetes .
+    
+    Comunicación externa al pod
+
+        Una aplicación contenerizada desplegada correctamente y ejecutada en pods dentro de un clúster de Kubernetes puede requerir accesibilidad externa. Kubernetes permite esta accesibilidad mediante servicios, encapsulaciones complejas de definiciones de reglas de enrutamiento de red almacenadas en iptables en los nodos del clúster e implementadas por agentes kube-proxy. Al exponer los servicios al exterior con la ayuda de kube-proxy, las aplicaciones se vuelven accesibles desde fuera del clúster a través de una dirección IP virtual y un puerto dedicado.

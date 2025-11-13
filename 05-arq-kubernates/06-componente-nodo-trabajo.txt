@@ -1,0 +1,98 @@
+Componentes del nodo de trabajo
+
+Un nodo de trabajo tiene los siguientes componentes: entorno de ejecución de contenedores, 
+    agente de nodo - kubelet, kubelet - CRI shims, proxy - kube-proxy, 
+    complementos (para DNS, componentes de observabilidad como paneles de control, monitoreo y registro a nivel de clúster y complementos de dispositivos).
+
+
+Tiempo de ejecución del contenedor
+
+    Aunque Kubernetes se describe como un "motor de orquestación de contenedores", carece de la capacidad de gestionar y ejecutar contenedores directamente. Para administrar el ciclo de vida de un contenedor, Kubernetes requiere un entorno de ejecución de contenedores en el nodo donde se programará un Pod y sus contenedores. Se requiere un entorno de ejecución en cada nodo de un clúster de Kubernetes, tanto en el plano de control como en los nodos de trabajo. Se recomienda ejecutar los componentes del plano de control de Kubernetes como contenedores; de ahí la necesidad de un entorno de ejecución en los nodos del plano de control. Kubernetes admite varios entornos de ejecución de contenedores:
+
+    CRI-O:
+    Un entorno de ejecución de contenedores ligero para Kubernetes, compatible con los registros de imágenes quay.io y Docker Hub .
+    containerd:
+    Un entorno de ejecución de contenedores simple, robusto y portátil.
+    Motor Docker:
+    Una plataforma de contenedores popular y compleja que utiliza containerd como entorno de ejecución de contenedores.
+    Entorno de ejecución de contenedores Mirantis
+    (anteriormente conocido como Docker Enterprise Edition).
+
+
+Agente de nodo - kubelet
+
+    El kubelet es un agente que se ejecuta en cada nodo, plano de control y nodos de trabajo, y se comunica con el plano de control. Recibe definiciones de Pods, principalmente del servidor de la API, e interactúa con el entorno de ejecución de contenedores en el nodo para ejecutar los contenedores asociados al Pod. También supervisa el estado y los recursos de los Pods que ejecutan contenedores.
+
+    El kubelet se conecta a entornos de ejecución de contenedores mediante una interfaz basada en plugins: la Interfaz de Entorno de Ejecución de Contenedores (CRI). La CRI consta de búferes de protocolo, la API gRPC, bibliotecas y especificaciones y herramientas adicionales. Para conectarse a entornos de ejecución de contenedores intercambiables, kubelet utiliza un shim de CRI, una aplicación que proporciona una capa de abstracción clara entre kubelet y el entorno de ejecución de contenedores.
+
+    Interfaz de tiempo de ejecución del contenedor
+
+    Interfaz de tiempo de ejecución de contenedores
+    (Obtenido de blog.kubernetes.io )
+    
+    Como se muestra arriba, el kubelet, que actúa como cliente gRPC, se conecta al CRI shim, que actúa como servidor gRPC, para realizar operaciones con contenedores e imágenes. El CRI implementa dos servicios: ImageService y RuntimeService. ImageService se encarga de todas las operaciones relacionadas con las imágenes, mientras que RuntimeService se encarga de todas las operaciones relacionadas con los pods y los contenedores.
+
+kubelet - Calzas CRI
+
+    ---
+    
+        Originalmente, el agente kubelet solo admitía un par de entornos de ejecución de contenedores: primero Docker Engine y luego rkt, mediante un modelo de interfaz único integrado directamente en el código fuente de kubelet. Sin embargo, este enfoque no estaba destinado a perdurar, aunque resultaba especialmente beneficioso para Docker. Con el tiempo, Kubernetes comenzó a migrar hacia un enfoque estandarizado para la integración de entornos de ejecución de contenedores mediante la introducción de la CRI. Kubernetes adoptó un método desacoplado y flexible para integrarse con diversos entornos de ejecución de contenedores sin necesidad de recompilar su código fuente. Cualquier entorno de ejecución de contenedores que implemente la CRI puede ser utilizado por Kubernetes para administrar contenedores.
+
+        Los shims son implementaciones, interfaces o adaptadores de la interfaz de tiempo de ejecución de contenedores (CRI), específicos para cada entorno de ejecución de contenedores compatible con Kubernetes. A continuación, presentamos algunos ejemplos de shims CRI:
+
+        cri- containerd
+        permite crear y gestionar contenedores directamente con containerd a petición de kubelet:
+
+        contenedor cri
+
+        cri-containerd
+        (Obtenido de blog.kubernetes.io )
+
+        CRI
+        -O permite el uso de cualquier entorno de ejecución compatible con la Open Container Initiative (OCI) con Kubernetes, como runC:
+
+        CRI-O
+
+        CRI-O
+        (Obtenido de cri-o.io )
+
+        Antes del lanzamiento de Kubernetes v1.24 ,
+        dockershim permitía crear y administrar contenedores invocando Docker Engine y su entorno de ejecución interno containerd. Debido a la popularidad de Docker Engine, este adaptador era la interfaz predeterminada utilizada por kubelet. Sin embargo, a partir del lanzamiento de Kubernetes v1.24, el proyecto Kubernetes dejó de mantener dockershim, su código específico se eliminó del código fuente de kubelet y, por lo tanto, ya no es compatible con el agente de nodo kubelet de Kubernetes. En consecuencia, Docker , Inc. y Mirantis acordaron introducir y mantener un adaptador de reemplazo, cri-dockerd, que garantiza que Docker Engine siga siendo una opción de entorno de ejecución de contenedores para Kubernetes, además de Mirantis Container Runtime (MCR). La introducción de cri-dockerd también garantiza que tanto Docker Engine como MCR sigan el mismo método de integración estandarizado que los entornos de ejecución compatibles con CRI.
+
+        dockershim a cri-dockerd
+
+        dockershim a cri-dockerd
+        (Obtenido de GitHub )
+        
+        Encontrará detalles adicionales sobre el proceso de obsolescencia de Dockershim en la página de preguntas frecuentes actualizada sobre la eliminación de Dockershim .
+    ---
+
+Proxy - kube-proxy
+
+
+        El kube-proxy es el agente de red que se ejecuta en cada nodo, plano de control y nodos de trabajo, y es responsable de las actualizaciones dinámicas y el mantenimiento de todas las reglas de red del nodo. Abstrae los detalles de la red de los pods y reenvía las solicitudes de conexión a los contenedores dentro de los pods.
+
+        El kube-proxy es responsable del reenvío de flujos TCP, UDP y SCTP o del reenvío aleatorio a través de un conjunto de backends Pod de una aplicación, e implementa reglas de reenvío definidas por los usuarios a través de objetos de la API de servicio.
+
+        El agente de nodo kube-proxy opera en conjunto con iptables del nodo. Iptables es una utilidad de cortafuegos creada para el sistema operativo Linux que los usuarios pueden administrar mediante una utilidad de línea de comandos del mismo nombre. iptables está disponible y viene preinstalada en muchas distribuciones de Linux.
+
+
+Complementos
+
+        Los complementos son características y funcionalidades del clúster que aún no están disponibles en Kubernetes, por lo que se implementan a través de complementos y servicios de terceros.
+
+        El clúster DNS
+        es un servidor DNS necesario para asignar registros DNS a los objetos y recursos de Kubernetes.
+
+        Panel de control.
+        Una interfaz de usuario web de propósito general para la gestión de clústeres.
+        
+        La monitorización
+        recopila métricas de contenedores a nivel de clúster y las guarda en un almacenamiento de datos central.
+
+        El registro
+        recopila los registros de los contenedores a nivel de clúster y los guarda en un almacenamiento de registros central para su análisis.
+        
+        Complementos de dispositivos:
+        Para recursos de hardware del sistema, como GPU, FPGA y NIC de alto rendimiento, que el nodo anunciará a los pods de la aplicación.
+

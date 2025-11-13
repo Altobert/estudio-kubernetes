@@ -9,27 +9,37 @@ Un nodo del plano de control ejecuta los siguientes componentes y agentes esenci
 Además, el nodo del plano de control ejecuta: entorno de ejecución de contenedores, agente de nodo (kubelet), proxy (kube-proxy), complementos opcionales para la observabilidad, como panel de control, supervisión a nivel de clúster y registro.
 
 
-***servidor API***
+***servidor API (Api server)***
 
 Todas las tareas administrativas son coordinadas por el kube-apiserver, 
  un componente central del plano de control que se ejecuta en el nodo del plano de control. 
+
  El servidor de API intercepta las llamadas RESTful de usuarios, 
     administradores, desarrolladores, operadores y agentes externos, 
-    para luego validarlas y procesarlas. Durante el procesamiento, el servidor de API lee el estado actual del clúster de Kubernetes desde el almacén de clave-valor y, tras la ejecución de una llamada, el estado resultante del clúster de Kubernetes se guarda en el almacén de clave-valor para su persistencia. El servidor de API es el único componente del plano de control que interactúa con el almacén de clave-valor, tanto para leer como para guardar la información del estado del clúster de Kubernetes, actuando como interfaz intermedia para cualquier otro agente del plano de control que consulte el estado del clúster.
+    para luego validarlas y procesarlas. Durante el procesamiento, 
+    el servidor de API lee el estado actual del clúster de Kubernetes desde el almacén de clave-valor y, 
+    tras la ejecución de una llamada, el estado resultante del clúster de Kubernetes se guarda en el almacén de clave-valor para su persistencia. 
+    
+    El servidor de API es el único componente del plano de control que interactúa con el almacén de clave-valor,
+    tanto para leer como para guardar la información del estado del clúster de Kubernetes, 
+    actuando como interfaz intermedia para cualquier otro agente del plano de control que consulte el estado del clúster.
 
 El servidor API es altamente configurable y personalizable. Puede escalar horizontalmente y también admite la adición de servidores API secundarios personalizados. Esta configuración transforma el servidor API principal en un proxy para todos los servidores API secundarios personalizados, redirigiendo todas las llamadas RESTful entrantes a ellos según reglas definidas por el usuario.
 
 
-***Planificador***
+***Planificador (scheduler)***
 
-La función del kube-scheduler es asignar nuevos objetos de carga de trabajo, como pods que encapsulan contenedores, a los nodos, generalmente nodos de trabajo. Durante el proceso de planificación, las decisiones se toman en función del estado actual del clúster de Kubernetes y los requisitos del nuevo objeto de carga de trabajo. El planificador obtiene del almacén de clave-valor, a través del servidor de la API, los datos de uso de recursos de cada nodo de trabajo del clúster. También recibe del servidor de la API los requisitos del nuevo objeto de carga de trabajo, que forman parte de sus datos de configuración. Estos requisitos pueden incluir restricciones establecidas por los usuarios y operadores, como la planificación de tareas en un nodo etiquetado con el par clave-valor disk==ssd. El planificador también considera los requisitos de calidad de servicio (QoS), la localidad de los datos, la afinidad, la antiafinidad, las trazas, la tolerancia, la topología del clúster, etc. Una vez que se dispone de todos los datos del clúster, el algoritmo de planificación filtra los nodos mediante predicados para aislar los posibles candidatos, que luego se priorizan para seleccionar el nodo que cumple con todos los requisitos para alojar la nueva carga de trabajo. El resultado de este proceso se comunica al servidor de la API, que delega la implementación de la carga de trabajo a otros agentes del plano de control.
+    La función del kube-scheduler es asignar nuevos objetos de carga de trabajo, 
+        como pods que encapsulan contenedores, a los nodos, generalmente nodos de trabajo. 
+        Durante el proceso de planificación, las decisiones se toman en función del estado actual del clúster de Kubernetes y los requisitos del nuevo objeto de carga de trabajo. El planificador obtiene del almacén de clave-valor, a través del servidor de la API, los datos de uso de recursos de cada nodo de trabajo del clúster. También recibe del servidor de la API los requisitos del nuevo objeto de carga de trabajo, que forman parte de sus datos de configuración. Estos requisitos pueden incluir restricciones establecidas por los usuarios y operadores, como la planificación de tareas en un nodo etiquetado con el par clave-valor disk==ssd. El planificador también considera los requisitos de calidad de servicio (QoS), la localidad de los datos, la afinidad, la antiafinidad, las trazas, la tolerancia, la topología del clúster, etc. Una vez que se dispone de todos los datos del clúster, el algoritmo de planificación filtra los nodos mediante predicados para aislar los posibles candidatos, que luego se priorizan para seleccionar el nodo que cumple con todos los requisitos para alojar la nueva carga de trabajo. El resultado de este proceso se comunica al servidor de la API, que delega la implementación de la carga de trabajo a otros agentes del plano de control.
 
-El planificador es altamente configurable y personalizable mediante políticas de planificación, complementos y perfiles. También admite planificadores personalizados adicionales; en ese caso, los datos de configuración del objeto deben incluir el nombre del planificador personalizado que se espera que tome la decisión de planificación para ese objeto en particular. Si no se incluye dicho nombre, se selecciona el planificador predeterminado.
+    El planificador es altamente configurable y personalizable mediante políticas de planificación, 
+        complementos y perfiles. También admite planificadores personalizados adicionales; en ese caso, los datos de configuración del objeto deben incluir el nombre del planificador personalizado que se espera que tome la decisión de planificación para ese objeto en particular. Si no se incluye dicho nombre, se selecciona el planificador predeterminado.
 
-En un clúster de Kubernetes de varios nodos, el planificador es extremadamente importante y complejo, mientras que en un clúster de Kubernetes de un solo nodo, posiblemente utilizado con fines de aprendizaje y desarrollo, la función del planificador es bastante simple.
+    En un clúster de Kubernetes de varios nodos, el planificador es extremadamente importante y complejo, mientras que en un clúster de Kubernetes de un solo nodo, posiblemente utilizado con fines de aprendizaje y desarrollo, la función del planificador es bastante simple.
 
 
-***Gerentes de control***
+***Gerentes de control (control manager)***
 
 Los administradores de controladores son componentes del nodo del plano de control que ejecutan controladores u procesos de operador para regular el estado del clúster de Kubernetes. Los controladores son procesos de bucle de vigilancia que se ejecutan continuamente y comparan el estado deseado del clúster (proporcionado por los datos de configuración de los objetos) con su estado actual (obtenido del almacén de clave-valor a través del servidor de la API). En caso de discrepancia, se toman medidas correctivas en el clúster hasta que su estado actual coincida con el estado deseado.
 
@@ -38,9 +48,14 @@ El kube-controller-manager ejecuta controladores u operadores responsables de ac
 El administrador de controladores de la nube ejecuta controladores u operadores responsables de interactuar con la infraestructura subyacente de un proveedor de nube cuando los nodos no están disponibles, de administrar los volúmenes de almacenamiento cuando los proporciona un servicio en la nube y de administrar el equilibrio de carga y el enrutamiento.
 
 
-Almacén de datos clave-valor
+Almacén de datos clave-valor (key-value data store)
 
-etcd es un proyecto de código abierto de la Cloud Native Computing Foundation (CNCF). etcd es un almacén de datos clave-valor distribuido y de alta consistencia que se utiliza para persistir el estado de un clúster de Kubernetes. Los nuevos datos se escriben en el almacén únicamente mediante la adición de registros; los datos nunca se reemplazan. Los datos obsoletos se compactan (o eliminan) periódicamente para minimizar el tamaño del almacén.
+etcd es un proyecto de código abierto de la Cloud Native Computing Foundation (CNCF). 
+    etcd es un almacén de datos clave-valor distribuido y de alta consistencia que se utiliza para
+    persistir el estado de un clúster de Kubernetes. 
+    Los nuevos datos se escriben en el almacén únicamente mediante la adición de registros; 
+    Los datos nunca se reemplazan. 
+    Los datos obsoletos se compactan (o eliminan) periódicamente para minimizar el tamaño del almacén.
 
 De todos los componentes del plano de control, solo el servidor API puede comunicarse con el almacén de datos etcd.
 
@@ -62,6 +77,5 @@ Algunas herramientas de arranque de clústeres de Kubernetes, como kubeadm, apro
 
 
     Líder y seguidores
-
  
     etcd está escrito en el lenguaje de programación Go. En Kubernetes, además de almacenar el estado del clúster, etcd también se utiliza para almacenar detalles de configuración como subredes, ConfigMaps, Secrets, etc.
