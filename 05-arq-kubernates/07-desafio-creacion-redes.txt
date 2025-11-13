@@ -17,7 +17,7 @@ Todos estos desafíos de red deben ser abordados por un clúster de Kubernetes y
         Cuando se inicia un grupo de contenedores definido por un Pod, el entorno de ejecución de contenedores inicializa un contenedor de pausa de infraestructura especial con el único propósito de crear un espacio de nombres de red para el Pod. Todos los contenedores adicionales, creados a petición del usuario y que se ejecutan dentro del Pod, compartirán el espacio de nombres de red del contenedor de pausa para que puedan comunicarse entre sí a través de localhost.
     
     Comunicación entre pods a través de nodos
-    
+
         En un clúster de Kubernetes, los pods (grupos de contenedores) se programan en los nodos de forma prácticamente impredecible. Independientemente del nodo anfitrión, se espera que los pods puedan comunicarse entre sí en todo el clúster, sin necesidad de implementar la traducción de direcciones de red (NAT). Este es un requisito fundamental para cualquier implementación de red en Kubernetes.
 
         El modelo de red de Kubernetes busca reducir la complejidad y trata los Pods como máquinas virtuales en una red, donde cada máquina virtual cuenta con una interfaz de red, lo que otorga a cada Pod una dirección IP única. Este modelo, denominado " IP por Pod ", garantiza la comunicación entre Pods, al igual que las máquinas virtuales pueden comunicarse entre sí en la misma red.
@@ -31,3 +31,5 @@ Todos estos desafíos de red deben ser abordados por un clúster de Kubernetes y
     Comunicación externa al pod
 
         Una aplicación contenerizada desplegada correctamente y ejecutada en pods dentro de un clúster de Kubernetes puede requerir accesibilidad externa. Kubernetes permite esta accesibilidad mediante servicios, encapsulaciones complejas de definiciones de reglas de enrutamiento de red almacenadas en iptables en los nodos del clúster e implementadas por agentes kube-proxy. Al exponer los servicios al exterior con la ayuda de kube-proxy, las aplicaciones se vuelven accesibles desde fuera del clúster a través de una dirección IP virtual y un puerto dedicado.
+    
+    
