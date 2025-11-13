@@ -1,7 +1,8 @@
 Descripción general del nodo del plano de control
 
 
-El nodo del plano de control proporciona un entorno de ejecución para los agentes del plano de control responsables de gestionar 
+El nodo del plano de control proporciona un entorno de ejecución para los agentes del plano de control
+ responsables de gestionar 
     el estado de un clúster de Kubernetes, 
         y es el núcleo de todas las operaciones dentro del clúster. 
     Los componentes del plano de control son agentes con funciones muy específicas en la gestión del clúster. 

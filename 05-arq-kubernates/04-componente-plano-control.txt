@@ -1,6 +1,10 @@
 Componentes del nodo del plano de control
 
-Un nodo del plano de control ejecuta los siguientes componentes y agentes esenciales del plano de control: servidor API, planificador, administradores de controladores y almacén de datos clave-valor.
+Un nodo del plano de control ejecuta los siguientes componentes y agentes esenciales del plano de control: 
+*servidor API            (Api server ), 
+*SHCEDULER               (planificador), 
+*controller managers     (administradores de controladores) y
+*key-value data store    (almacén de datos clave-valor) .
 
 Además, el nodo del plano de control ejecuta: entorno de ejecución de contenedores, agente de nodo (kubelet), proxy (kube-proxy), complementos opcionales para la observabilidad, como panel de control, supervisión a nivel de clúster y registro.
 
